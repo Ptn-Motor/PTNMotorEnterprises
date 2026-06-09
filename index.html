@@ -203,7 +203,51 @@ Excellent condition • Άριστη κατάσταση
 </div>
 
 </div>
+<h2 class="section-title">
+Land Rover Defender 90 SE
+</h2>
 
+<div class="car-card">
+
+<div class="slider">
+    <button class="prev" onclick="changeDefender(-1)">❮</button>
+
+    <img id="defenderImage"
+         src="defender1.jpg"
+         alt="Land Rover Defender 90 SE">
+
+    <button class="next" onclick="changeDefender(1)">❯</button>
+</div>
+
+<div class="car-content">
+
+<h2>Land Rover Defender 90 SE</h2>
+
+<div class="price">Coming Soon</div>
+
+<p>
+Excellent condition • Άριστη κατάσταση
+</p>
+
+<div class="specs">
+
+<div class="spec"><b>Year:</b> 2023</div>
+<div class="spec"><b>Engine:</b> 2.0L Turbocharged Petrol</div>
+<div class="spec"><b>Fuel:</b> Petrol</div>
+<div class="spec"><b>Transmission:</b> Automatic</div>
+<div class="spec"><b>Mileage:</b> 20,169 km</div>
+<div class="spec"><b>Color:</b> Shifting Pangea (1DJ)</div>
+<div class="spec"><b>Drive:</b> 4WD</div>
+
+</div>
+
+<a class="button" href="tel:+35799648876">
+📞 Call Us / Καλέστε μας
+</a>
+
+</div>
+
+</div>
 <footer>
 PTN MOTOR ENTERPRISES LTD<br>
 📞 99648876
@@ -234,6 +278,32 @@ function changeSlide(direction) {
     }
 
     document.getElementById("carImage").src = images[currentImage];
+}
+    const defenderImages = [
+    "defender1.jpg",
+    "defender2.jpg",
+    "defender3.jpg",
+    "defender4.jpg",
+    "defender5.jpg",
+    "defender6.jpg"
+];
+
+let currentDefender = 0;
+
+function changeDefender(direction) {
+
+    currentDefender += direction;
+
+    if (currentDefender < 0) {
+        currentDefender = defenderImages.length - 1;
+    }
+
+    if (currentDefender >= defenderImages.length) {
+        currentDefender = 0;
+    }
+
+    document.getElementById("defenderImage").src =
+        defenderImages[currentDefender];
 }
 </script>
 </body>
