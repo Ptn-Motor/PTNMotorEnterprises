@@ -337,6 +337,51 @@ function changeDefender(direction) {
     document.getElementById("defenderImage").src =
         defenderImages[currentDefender];
 }
+    function changeDefender(direction) {
+
+    currentDefender += direction;
+
+    if (currentDefender < 0) {
+        currentDefender = defenderImages.length - 1;
+    }
+
+    if (currentDefender >= defenderImages.length) {
+        currentDefender = 0;
+    }
+
+    document.getElementById("defenderImage").src =
+        defenderImages[currentDefender];
+}
+
+/* PASTE HERE */
+
+const workImages = [
+    "work1.jpg",
+    "work2.jpg",
+    "work3.jpg",
+    "work4.jpg",
+    "work5.jpg"
+];
+
+let currentWork = 0;
+
+function changeWork(direction){
+
+    currentWork += direction;
+
+    if(currentWork < 0){
+        currentWork = workImages.length - 1;
+    }
+
+    if(currentWork >= workImages.length){
+        currentWork = 0;
+    }
+
+    document.getElementById("workImage").src =
+        workImages[currentWork];
+}
+
+</script>
 </script>
 </body>
 </html>
