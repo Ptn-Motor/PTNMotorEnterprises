@@ -309,27 +309,11 @@ function changeDefender(direction) {
     document.getElementById("defenderImage").src =
         defenderImages[currentDefender];
 }
-    function changeDefender(direction) {
-
-    currentDefender += direction;
-
-    if (currentDefender < 0) {
-        currentDefender = defenderImages.length - 1;
-    }
-
-    if (currentDefender >= defenderImages.length) {
-        currentDefender = 0;
-    }
-
-    document.getElementById("defenderImage").src =
-        defenderImages[currentDefender];
-}
-
+    
 /* PASTE HERE */
 
 
 
-</script>
 </script>
 </body>
 </html>
