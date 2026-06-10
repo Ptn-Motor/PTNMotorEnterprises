@@ -137,6 +137,14 @@ margin-top:40px;
 
 .next{
     right:10px;
+    .work-section{
+background:white;
+padding:40px;
+margin:30px auto;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+max-width:1200px;
+}
 }</style>
 </head>
 
@@ -153,6 +161,30 @@ margin-top:40px;
 <p>Ποιοτικά Μεταχειρισμένα Αυτοκίνητα στην Κύπρο</p>
 
 </header>
+
+<section class="work-section">
+
+<h2 class="section-title">
+Our Work / Η Δουλειά Μας
+</h2>
+
+<div class="slider">
+<button class="prev" onclick="changeWork(-1)">❮</button>
+
+<img id="workImage"
+src="work1.jpg"
+alt="PTN Workshop">
+
+<button class="next" onclick="changeWork(1)">❯</button>
+</div>
+
+<p style="text-align:center;margin-top:20px;font-size:18px;">
+Performance Builds • Motorsport Support • Service & Repairs
+<br>
+Βελτιώσεις • Αγωνιστική Υποστήριξη • Service & Επισκευές
+</p>
+
+</section>
 
 <div class="container">
 
