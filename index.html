@@ -107,15 +107,15 @@ margin-top:40px;
 }
 .slider{
     position:relative;
-    max-width:450px;
+    max-width:800px;
     margin:auto;
 }
 
 .slider img{
     width:100%;
-    height:280px;
+    height:450px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:15px;
 }
 .prev,
 .next{
@@ -243,48 +243,14 @@ border-radius:20px;
 Our Workshop & Motorsport Projects
 </h2>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-">
+<div class="slider">
+    <button class="prev" onclick="changeGarage(-1)">❮</button>
 
-<img src="./garage1.jpg"
-style="
-width:120%;
-height:350px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-">
+    <img id="garageImage"
+         src="garage1.jpg"
+         alt="PTN Workshop">
 
-<img src="./garage2.jpg"
-style="
-width:120%;
-height:350px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-">
-
-<img src="./garage3.jpg"
-style="
-width:120%;
-height:350px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-">
-
-<img src="./garage4.jpg"
-style="
-width:110%;
-height:350px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-">
-
+    <button class="next" onclick="changeGarage(1)">❯</button>
 </div>
 </div>
 
@@ -446,9 +412,30 @@ function changeDefender(direction) {
 }
     
 /* PASTE HERE */
+const garageImages = [
+    "garage1.jpg",
+    "garage2.jpg",
+    "garage3.jpg",
+    "garage4.jpg"
+];
 
+let currentGarage = 0;
 
+function changeGarage(direction){
 
+    currentGarage += direction;
+
+    if(currentGarage < 0){
+        currentGarage = garageImages.length - 1;
+    }
+
+    if(currentGarage >= garageImages.length){
+        currentGarage = 0;
+    }
+
+    document.getElementById("garageImage").src =
+        garageImages[currentGarage];
+}
 </script>
 </body>
 </html>
